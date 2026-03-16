@@ -2,12 +2,12 @@ import '../models/log_level.dart';
 import '../models/log_config.dart';
 import 'logger.dart';
 
-/// LogKit - 全局日志管理器
-class LogKit {
+/// LoggerKit - 全局日志管理器
+class LoggerKit {
   static Logger? _instance;
   static LogConfig? _config;
 
-  /// 初始化LogKit
+  /// 初始化LoggerKit
   static void init({
     LogLevel minLevel = LogLevel.debug,
     bool enableConsole = true,
@@ -106,7 +106,7 @@ class LogKit {
     );
   }
 
-  /// 关闭LogKit
+  /// 关闭LoggerKit
   static Future<void> close() async {
     await _instance?.close();
     _instance = null;
